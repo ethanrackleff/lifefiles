@@ -2,13 +2,13 @@
 # 0–7  = “normal”  • 8–15 = “bright”  (ANSI convention)
 
 export COLOR0="#000000"   # black          • primary text
-export COLOR1="#2e2e2e"   # dark‑gray
-export COLOR2="#4b4b4b"   # dim‑gray
-export COLOR3="#696969"   # slate‑gray
-export COLOR4="#878787"   # mid‑gray
-export COLOR5="#a4a4a4"   # light‑gray
-export COLOR6="#c2c2c2"   # very‑light gray
-export COLOR7="#dfdfdf"   # near‑white
+export COLOR1="#000000"   # dark‑gray
+export COLOR2="#222222"   # dim‑gray
+export COLOR3="#444444"   # slate‑gray
+export COLOR4="#666666"   # mid‑gray
+export COLOR5="#555555"   # light‑gray
+export COLOR6="#000000"   # very‑light gray
+export COLOR7="#000000"   # near‑white
 
 # “Bright” set – duplicated so colored output still shows contrast
 export COLOR8="#000000"    # bright black   (same as black)
