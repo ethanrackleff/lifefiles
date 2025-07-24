@@ -1,13 +1,10 @@
-# Default config for sway
+# Minimalist Config for Sway: Optimized for E-ink and Life
 #
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
-
 include ~/.config/sway/colors
-
-### Variables
 #
+##################################################################
+### Variables
+##################################################################
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -15,57 +12,60 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
+# preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
-set $menu wmenu-run
-
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#
-# Example configuration:
-#
+# set $menu wmenu-run
+##################################################################
+### Screen
+##################################################################
    output eDP-1 {
 		mode 1920x1080@48.034Hz
 	}
-#
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-
 ### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
-
-### Input configuration
+##################################################################
+### Style
+##################################################################
 #
-# Example configuration:
-#
-#   input type:touchpad {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-#   input type:keyboard {
-#       xkb_layout "eu"
-#   }
-#
-# You can also configure each device individually.
-# Read `man 5 sway-input` for more information about this section.
-#Here is me (Ethan, yes it's Ethan) changing the font:
+#Set font:
 font pango:monospace 18
-### Key bindings
 #
+#Set background:
+client.background $bg
+#
+#Window decorations:
+#            border   BG          text  indicator child_border
+client.focused   $accent $accent  $bg   $fg     $accent      
+client.unfocused $accent $bg      $bg   $fg     $bg         
+#
+#Window gaps:
+gaps inner 8
+gaps outer -1
+#
+#Top bar:
+bar {
+    mode dock
+    position bottom
+    colors {
+        background $bg
+        statusline $fg
+        focused_workspace   $accent $accent $bg
+        inactive_workspace  $bg     $bg     $fg
+#        urgent_workspace    $red    $red    $bg
+    }
+}
+#
+##################################################################
+### Key bindings
+##################################################################
 # Basics:
 #
     # Start a terminal
@@ -214,23 +214,5 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
     bindsym Print exec grim
-
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
 
 include /etc/sway/config.d/*
