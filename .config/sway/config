@@ -23,12 +23,6 @@ set $menu wmenu-run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-bar {
-	colors {
-		background $bg
-		statusline $fg
-	}
-}
 #
 # Example configuration:
 #
