@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+source ~/.bashrc
+mk-alacritty-colors
+mk-sway-colors
+swaymsg reload 
