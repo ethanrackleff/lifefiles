@@ -25,9 +25,9 @@ set $term alacritty
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 ### Idle configuration
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 'swaylock -f -c $bg' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock -f -c $bg'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -35,6 +35,7 @@ exec swayidle -w \
 ### Style
 ##################################################################
 #
+exec swaybg --color $bg
 #Set font:
 font pango:monospace 18
 #
@@ -43,16 +44,16 @@ client.background $bg
 #
 #Window decorations:
 #            border   BG          text  indicator child_border
-client.focused   $accent $accent  $bg   $fg     $accent      
-client.unfocused $accent $bg      $bg   $fg     $bg         
+client.focused   $fg $bg  $fg   $bg     $fg      
+client.unfocused $accent $bg      $accent   $fg     $bg         
 #
 #Window gaps:
-gaps inner 8
+gaps inner -1 
 gaps outer -1
 #
 #Top bar:
 bar {
-    mode dock
+    mode hide
     position bottom
     colors {
         background $bg
