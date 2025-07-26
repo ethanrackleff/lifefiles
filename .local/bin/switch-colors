@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+ln -sf "$HOME/.config/colors/$1" "$HOME/.config/colors/current"
 source ~/.bashrc
 mk-alacritty-colors
 mk-sway-colors
