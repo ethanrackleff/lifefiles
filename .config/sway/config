@@ -17,7 +17,7 @@ set $term alacritty
 # Your preferred application launcher
 # set $menu wmenu-run
 ##################################################################
-### Screen
+### Screen & Input configuration
 ##################################################################
    output eDP-1 {
 		mode 1920x1080@48.034Hz
@@ -31,6 +31,10 @@ exec swayidle -w \
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+input "type:keyboard" xkb_options caps:swapescape
+#The above swaps the escape key with the caps lock key.
+input "type:pointer" accel_profile flat
+#The above makes mouse acceleration constant
 ##################################################################
 ### Style
 ##################################################################
@@ -48,8 +52,8 @@ client.focused   $fg $bg  $fg   $bg     $fg
 client.unfocused $accent $bg      $accent   $fg     $bg         
 #
 #Window gaps:
-gaps inner -1 
-gaps outer -1
+gaps inner 20px
+gaps outer 20px
 #
 #Top bar:
 bar {
