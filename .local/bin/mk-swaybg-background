@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+source "$HOME/.config/colors/current"
+
+exec swaybg --color $COLOR15 
+echo "CHanged swaybg background to $COLOR15"

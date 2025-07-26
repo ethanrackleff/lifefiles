@@ -3,6 +3,5 @@
 source ~/.bashrc
 mk-alacritty-colors
 mk-sway-colors
-mk-swaybg-background
 mk-waybar-colors
 swaymsg reload 
