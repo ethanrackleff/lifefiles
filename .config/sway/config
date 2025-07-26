@@ -53,15 +53,16 @@ gaps outer -1
 #
 #Top bar:
 bar {
-    mode hide
-    position bottom
-    colors {
-        background $bg
-        statusline $fg
-        focused_workspace   $accent $accent $bg
-        inactive_workspace  $bg     $bg     $fg
+	swaybar_command waybar
+#    mode hide
+#    position bottom
+#    colors {
+#        background $bg
+#        statusline $fg
+#        focused_workspace   $accent $accent $bg
+#        inactive_workspace  $bg     $bg     $fg
 #        urgent_workspace    $red    $red    $bg
-    }
+#    }
 }
 #
 ##################################################################
