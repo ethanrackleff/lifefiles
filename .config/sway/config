@@ -44,23 +44,15 @@ font pango:mononoki 14
 #border BG text indicator child_border
 client.focused $fg $bg $fg $bg $fg      
 client.unfocused $fg_accent $bg $fg_accent $bg $fg_accent  
+default_border pixel 2
 #
 #Window gaps:
-gaps inner 10px
-gaps outer 10px
+gaps inner 10
+gaps outer 10
 #
 #Top bar:
 bar {
 	swaybar_command waybar
-#    mode hide
-#    position bottom
-#    colors {
-#        background $bg
-#        statusline $fg
-#        focused_workspace   $accent $accent $bg
-#        inactive_workspace  $bg     $bg     $fg
-#        urgent_workspace    $red    $red    $bg
-#    }
 }
 #
 ##################################################################
