@@ -1,7 +1,15 @@
-[font]
-	size = 18.0
-
 [general]
-import = [
-	"~/.config/alacritty/colors.toml"
-]
+	live_config_reload = true
+	import = ["~/.config/alacritty/colors.toml"]
+
+[font]
+	normal = { family = "mononoki", style = "Regular" }
+	size = 16.0
+
+[cursor]
+	style = { shape = "Beam", blinking = "Off" }
+	unfocused_hollow = false
+
+[mouse]
+	hide_when_typing = true
+
