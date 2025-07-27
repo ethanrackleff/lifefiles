@@ -12,6 +12,7 @@ cat > "$outfile" <<EOF
 set \$bg $COLOR15
 set \$fg $COLOR0
 set \$accent $COLOR5
+set \$fg_accent $COLOR8
 
 # 8‑color set (optional, useful for borders/workspaces)
 set \$black   $COLOR0
