@@ -1,21 +1,13 @@
 // -*- mode: jsonc -*-
+[
 {
-    "layer": "top",     
+    "layer": "top",
+    "position": "top",
+    "reload_style_on_change": true,
 
-    "modules-left": [
-        "sway/workspaces"
-    ],
-
-    "modules-center": [
-        "clock"
-    ],
-
-    "modules-right": [
-        /*"pulseaudio",*/
-        "network",
-        "battery",
-	"custom/power"
-    ],
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network",   "battery"],
 
     "sway/workspaces": {
 	    "disable-scroll": true,
@@ -24,8 +16,7 @@
      },
 
     "clock": {
-        "format-alt": "{:%a %d, %I:%M %p}",
-	"tooltip": false
+        "format": "{:%a %b %d %I:%M %p}"
     },
 
     "battery": {
@@ -35,48 +26,19 @@
         },
         "format": "{icon}",
         "format-charging": " {icon}",
-        "format-icons": ["", "", "", "", "l"]
+        "format-icons": ["", "", "", "", ""],
+	"format-alt": "{capacity}% {icon}",
+	"tooltip": false
     },
 
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
         "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-alt": "{essid}",
 	"tooltip": false
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
     }
 }
+]

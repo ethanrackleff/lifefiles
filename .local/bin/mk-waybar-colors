@@ -11,8 +11,9 @@ cat > "$outfile" <<EOF
 @define-color bg $COLOR15; 
 @define-color fg $COLOR0;
 @define-color acc $COLOR5;
-@define-color acc_fg $COLOR4;
+@define-color acc_fg $COLOR8;
 @define-color green $COLOR2;
+@define-color red $COLOR1;
 EOF
 
 echo "Wrote waybar colors to $outfile"
