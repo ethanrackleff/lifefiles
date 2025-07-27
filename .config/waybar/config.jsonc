@@ -26,13 +26,13 @@
         },
         "format": "{icon}",
         "format-charging": " {icon}",
-        "format-icons": ["", "", "", "", ""],
+        "format-icons": [" ", " ", " ", " ", " "],
 	"format-alt": "{capacity}% {icon}",
 	"tooltip": false
     },
 
     "network": {
-        "format-wifi": "",
+        "format-wifi": " ",
         "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",

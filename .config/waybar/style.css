@@ -5,20 +5,20 @@
 
 #waybar {
 	background-color: @bg;
-	min-height: 32px;
 	padding: 0 6px;
 	font-family: "mononoki", "Font Awesome 6 Free Solid";
     	font-size: 20px;
 }
 
 #waybar .module {
-	padding: 0 12px;
+	padding: 4 12px;
 }
 
 
 
 #workspaces button {
     color: @acc_fg;
+    padding: 0 12px;
 }
 
 #workspaces button.focused {
@@ -33,6 +33,7 @@
 
 #battery {
     color: @fg;
+    padding: 0 12px;
 }
 
 #battery.charging, #battery.pmlugged {
@@ -45,6 +46,7 @@
 
 #network {
     color: @fg;
+    padding: 0 12px;
 }
 
 #network.disconnected {
