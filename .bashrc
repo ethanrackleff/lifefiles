@@ -13,3 +13,5 @@ alias lifefiles='/usr/bin/git --git-dir=$HOME/.lifefiles/ --work-tree=$HOME'
 if [[ -f "$HOME/.config/colors/current" ]]; then
 	source "$HOME/.config/colors/current"
 fi
+#PROMPT_COMMAND='printf "testing"'
+PS1='\w\n\$ '

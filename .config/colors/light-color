@@ -10,7 +10,7 @@ export COLOR5="#7b1fa2"   # magenta
 export COLOR6="#0097a7"   # cyan
 export COLOR7="#424242"   # dark‑gray
 
-export COLOR8="#757575"   # gray
+export COLOR8="#999999"   # gray
 export COLOR9="#ef5350"   # light red
 export COLOR10="#66bb6a"  # light green
 export COLOR11="#ffeb3b"  # light yellow
