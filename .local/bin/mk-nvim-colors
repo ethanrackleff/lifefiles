@@ -14,8 +14,8 @@ M.setup = function()
   vim.opt.termguicolors = true
 
   -- base groups
-  vim.api.nvim_set_hl(0, 'Normal',        { fg = "$fg", bg = "$bg" })
-  vim.api.nvim_set_hl(0, 'LineNr',        { fg = "$fg", bg = "$bg" })
+  vim.api.nvim_set_hl(0, 'Normal',        { fg = "$FG", bg = "$BG" })
+  vim.api.nvim_set_hl(0, 'LineNr',        { fg = "$FG", bg = "$BG" })
   vim.api.nvim_set_hl(0, 'CursorLine',    { bg = "$COLOR15" })
   vim.api.nvim_set_hl(0, 'CursorLineNr',  { fg = "$ACCENT", bg = "$COLOR15", bold = true })
   vim.api.nvim_set_hl(0, 'Visual',        { bg = "$COLOR14" })
