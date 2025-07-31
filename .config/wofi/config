@@ -1,0 +1,6 @@
+show=run
+prompt=>
+
+location=center
+hide_scroll=true
+lines=10

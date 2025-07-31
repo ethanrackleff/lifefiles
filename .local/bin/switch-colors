@@ -5,4 +5,5 @@ mk-alacritty-colors
 mk-sway-colors
 mk-waybar-colors
 mk-nvim-colors
+mk-wofi-colors
 swaymsg reload 

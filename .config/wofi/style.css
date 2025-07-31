@@ -1,0 +1,25 @@
+@import url("/home/erackleff/.config/wofi/colors/colors.css");
+
+window {
+    font-family: "mononoki";
+    font-size: 16pt;
+    background-color: @bg; /* deep grey-blue */
+    border-style: solid;
+    border-width: 2px;
+    border-color: @fg;
+}
+
+/* -------- Entry rows --------------------------------------------- */
+#entry {
+    padding: 6px;
+}
+
+/* -------- Search/input field ------------------------------------- */
+#input {
+    margin: 6px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: @bg; /* slightly lighter panel */
+    color: @fg;
+}
+
