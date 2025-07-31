@@ -6,8 +6,8 @@
     "reload_style_on_change": true,
 
     "modules-left": ["sway/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["network",   "battery"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["network",  "battery", "clock"],
 
     "sway/workspaces": {
 	    "disable-scroll": true,

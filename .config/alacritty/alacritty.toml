@@ -7,11 +7,12 @@
 	size = 16.0
 
 [cursor]
+    unfocused_hollow = false
 	style = { shape = "Beam", blinking = "Off" }
-	unfocused_hollow = false
-
+	
 [window]
-	padding = { x = 16, y = 16}	
+	padding = { x = 8, y = 8}	
+    decorations = "None"
 
 [mouse]
 	hide_when_typing = true

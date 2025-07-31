@@ -18,8 +18,8 @@ window {
 #input {
     margin: 6px;
     padding: 4px;
-    border-radius: 4px;
     background-color: @bg; /* slightly lighter panel */
     color: @fg;
+    border-color: @bg;
 }
 
