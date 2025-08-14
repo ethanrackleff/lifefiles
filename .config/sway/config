@@ -55,6 +55,8 @@ bar {
 	swaybar_command waybar
 }
 #
+#Change cursor:
+seat seat0 xcursor_theme Simple-and-Soft 300
 ##################################################################
 ### Key bindings
 ##################################################################

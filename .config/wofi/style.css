@@ -21,5 +21,6 @@ window {
     background-color: @bg; /* slightly lighter panel */
     color: @fg;
     border-color: @bg;
+
 }
 

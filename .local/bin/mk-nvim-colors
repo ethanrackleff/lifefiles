@@ -50,23 +50,23 @@ return {
   bright_blue = "$COLOR12",
   bright_magenta = "$COLOR13",
   bright_cyan = "$COLOR14",
-  white = "$COLOR15",
+  white = "$COLOR14",
   gutter_fg = "$COLOR8",
   nontext = "$COLOR8",
   
-  bg = "$BG",
-  fg         = "$FG",
-  cursorline = "$ACCENT",
-  selection  = "$COLOR8", --grey
-  linenr     = "$COLOR8",
+  bg = "$BG", --black
+  fg         = "$FG", --white
+  cursorline = "$COLOR4", --light grey
+  selection  = "$FG", --black
+  linenr     = "$COLOR7", --dark-gray
   comment    = "$COLOR8", --grey
 
-  keyword    = "$COLOR1",
-  Function   = "$COLOR2",
-  string     = "$ACCENT",
-  constant   = "$ACCENT",
+  keyword    = "$COLOR1", --
+  Function   = "$COLOR2", --
+  string     = "$COLOR7",
+  constant   = "$COLOR7",
   type       = "$ACCENT",
-  number     = "$COLOR3",
+  number     = "$COLOR5",
   boolean    = "$ACCENT",
   operator   = "$ACCENT",
   variable   = "$ACCENT",

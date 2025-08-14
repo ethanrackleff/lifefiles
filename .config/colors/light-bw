@@ -3,24 +3,24 @@
 
 export COLOR0="#000000"   # black          • primary text
 export COLOR1="#000000"   # dark‑gray
-export COLOR2="#222222"   # dim‑gray
-export COLOR3="#444444"   # slate‑gray
-export COLOR4="#666666"   # mid‑gray
-export COLOR5="#555555"   # light‑gray
-export COLOR6="#000000"   # very‑light gray
-export COLOR7="#000000"   # near‑white
+export COLOR2="#000000"   # dim‑gray
+export COLOR3="#000000"   # slate‑gray
+export COLOR4="#000000"   # mid‑gray
+export COLOR5="#000000"   # light‑gray
+export COLOR6="#999999"   # very‑light gray
+export COLOR7="#666666"   # near‑white
 
 # “Bright” set – duplicated so colored output still shows contrast
-export COLOR8="#000000"    # bright black   (same as black)
-export COLOR9="#2e2e2e"
-export COLOR10="#4b4b4b"
-export COLOR11="#696969"
-export COLOR12="#878787"
-export COLOR13="#a4a4a4"
-export COLOR14="#c2c2c2"
-export COLOR15="#ffffff"   # pure white     • page background
+export COLOR8="#cccccc"    # bright black   (same as black)
+export COLOR9="#000000"
+export COLOR10="#000000"
+export COLOR11="#000000"
+export COLOR12="#000000"
+export COLOR13="#000000"
+export COLOR14="#000000"
+export COLOR15="#ffffff"   # pure white
 
 # Semantic aliases for generators / CSS
 export BG="$COLOR15"       # white background
 export FG="$COLOR0"       # black foreground
-export ACCENT="$COLOR3"   # mid‑gray accent (e.g., selection, highlights)
+export ACCENT="$COLOR4"   # mid‑gray accent (e.g., selection, highlights)
