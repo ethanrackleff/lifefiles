@@ -1,0 +1,26 @@
+# Light‑mode palette ─ white background, black text, gentle accent colours
+# Normal  (0‑7)  •  Bright (8‑15)
+
+export COLOR0="#ffffff"   # black            ← foreground / text
+export COLOR1="#d32f2f"   # red
+export COLOR2="#388e3c"   # green
+export COLOR3="#fbc02d"   # yellow / amber
+export COLOR4="#1976d2"   # blue             ← accent
+export COLOR5="#7b1fa2"   # magenta
+export COLOR6="#0097a7"   # cyan
+export COLOR7="#424242"   # dark‑gray
+
+export COLOR8="#999999"   # gray
+export COLOR9="#ef5350"   # light red
+export COLOR10="#66bb6a"  # light green
+export COLOR11="#ffeb3b"  # light yellow
+export COLOR12="#42a5f5"  # light blue
+export COLOR13="#ba68c8"  # light magenta
+export COLOR14="#26c6da"  # light cyan
+export COLOR15="#000000"  # white            ← background
+
+# Semantic aliases for scripts & CSS generators
+export BG="$COLOR15"      # background (white)
+export FG="$COLOR0"       # foreground (black)
+export ACCENT="$COLOR4"   # primary accent (blue)
+

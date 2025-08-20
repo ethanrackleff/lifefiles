@@ -23,3 +23,4 @@ vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 -- 4. Lazy‑load plugins
 require("config.lazy")
 
+

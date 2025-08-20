@@ -3,7 +3,7 @@
 	import = ["~/.config/alacritty/colors.toml"]
 
 [font]
-	normal = { family = "mononoki", style = "Regular" }
+	normal = { family = "mononoki",  style = "Regular" }
 	size = 16.0
 
 [cursor]
