@@ -24,3 +24,4 @@ export COLOR15="#ffffff"   # pure white
 export BG="$COLOR15"       # white background
 export FG="$COLOR0"       # black foreground
 export ACCENT="$COLOR4"   # mid‑gray accent (e.g., selection, highlights)
+export GTKTHEME="0"         #light theme for gtk applications

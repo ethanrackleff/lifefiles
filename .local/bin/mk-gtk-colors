@@ -1,0 +1,5 @@
+source "$HOME/.config/colors/current"
+
+CONFIG=$'[Settings]\ngtk-application-prefer-dark-theme='
+echo "$CONFIG$GTKTHEME" > $HOME/.config/gtk-3.0/settings.ini
+echo "Wrote GTK theme to $HOME/.config/gtk-3.0/settings.ini"

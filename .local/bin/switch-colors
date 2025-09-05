@@ -6,4 +6,5 @@ mk-sway-colors
 mk-waybar-colors
 mk-nvim-colors
 mk-wofi-colors
+mk-gtk-colors
 swaymsg reload 
