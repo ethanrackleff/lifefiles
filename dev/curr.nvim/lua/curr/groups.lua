@@ -71,11 +71,11 @@ M.setup = function()
 
     Conceal = { fg = colors.comment },
     CursorColumn = { bg = colors.black },
-    CursorLine = { bg = colors.selection },
+    CursorLine = { bg = colors.comment },
     ColorColumn = { bg = colors.selection },
 
-    StatusLine = { fg = colors.statusline , bg = colors.black },
-    StatusLineNC = { fg = colors.comment },
+    StatusLine = { fg = colors.bg , bg = colors.fg },
+    StatusLineNC = { fg = colors.fg , bg = colors.fg },
     StatusLineTerm = { fg = colors.white, bg = colors.black },
     StatusLineTermNC = { fg = colors.comment },
 
@@ -87,7 +87,7 @@ M.setup = function()
 
     ErrorMsg = { fg = colors.bright_red },
     VertSplit = { fg = colors.black },
-    WinSeparator = { fg = colors.black },
+    WinSeparator = { fg = colors.bg },
     Folded = { fg = colors.comment },
     FoldColumn = {},
     Search = { fg = colors.black, bg = colors.number },
@@ -95,10 +95,10 @@ M.setup = function()
     LineNr = { fg = colors.comment },
     MatchParen = { fg = colors.fg, underline = true },
     NonText = { fg = colors.nontext },
-    Pmenu = { fg = colors.white, bg = colors.menubg },
-    PmenuSel = { fg = colors.white, bg = colors.selection },
+    Pmenu = { fg = colors.bg, bg = colors.fg },
+    PmenuSel = { fg = colors.white, bg = colors.comment },
     PmenuSbar = { bg = colors.bg },
-    PmenuThumb = { bg = colors.selection },
+    PmenuThumb = { bg = colors.comment },
 
     Question = { fg = colors.magenta },
     QuickFixLine = { fg = colors.black, bg = colors.yellow },
@@ -286,8 +286,8 @@ M.setup = function()
     NvimTreeFolderName = { fg = colors.fg },
     NvimTreeSpecialFile = { fg = colors.blue, underline = true },
     NvimTreeOpenedFolderName = { fg = colors.fg },
-    NvimTreeCursorLine = { bg = colors.selection },
-    NvimTreeIn = { bg = colors.selection },
+    NvimTreeCursorLine = { bg = colors.comment },
+    NvimTreeIn = { bg = colors.comment },
 
     -- LSP
     DiagnosticError = { fg = colors.red },
