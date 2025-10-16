@@ -15,3 +15,11 @@ if [[ -f "$HOME/.config/colors/current" ]]; then
 fi
 #PROMPT_COMMAND='printf "testing"'
 PS1='\w\n\$ '
+
+cl() {
+    cd "$1" && ls
+}
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
