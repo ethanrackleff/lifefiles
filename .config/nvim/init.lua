@@ -7,6 +7,7 @@ vim.g.mapleader = " "
 
 -- 3. Core options
 local opt = vim.opt
+vim.g.clipboard = "wl-copy"
 opt.number         = true   -- line numbers
 opt.relativenumber = true
 opt.cursorline     = false
@@ -16,11 +17,106 @@ opt.tabstop        = 4
 opt.clipboard      = "unnamedplus"
 opt.termguicolors  = true
 opt.signcolumn     = "yes"
+opt.foldmethod     = "expr"
+opt.foldexpr       = "v:lua.vim.treesitter.foldexpr()"
+opt.foldcolumn     = "0"
+opt.foldtext       = ""
+opt.foldlevel      = 99
+opt.foldlevelstart = 1
+opt.foldnestmax    = 4
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
 -- 4. Lazy‑load plugins
+require("options")
 require("config.lazy")
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
 
+require("nvim-tree").setup({
+  hijack_cursor = true,
+  sort = {
+    sorter = "case_sensitive",
+  },
+  view = {
+    width = 30,
+    cursorline = false,
+  },
+  renderer = {
+    full_name = true,
+    group_empty = true,
+    indent_markers = {
+        enable = true,
+    },
+  },
+  filters = {
+    dotfiles = false,
+  },
+})
+
+require("claude-code").setup({
+  -- Terminal window settings
+  window = {
+    split_ratio = 0.3,      -- Percentage of screen for the terminal window (height for horizontal, width for vertical splits)
+    position = "float",  -- Position of the window: "botright", "topleft", "vertical", "float", etc.
+    enter_insert = true,    -- Whether to enter insert mode when opening Claude Code
+    hide_numbers = true,    -- Hide line numbers in the terminal window
+    hide_signcolumn = true, -- Hide the sign column in the terminal window
+    
+    -- Floating window configuration (only applies when position = "float")
+    float = {
+      width = "40%",        -- Width: number of columns or percentage string
+      height = "50%",       -- Height: number of rows or percentage string
+      row = "0%",       -- Row position: number, "center", or percentage string
+      col = "100%",       -- Column position: number, "center", or percentage string
+      relative = "editor",  -- Relative to: "editor" or "cursor"
+      border = "rounded",   -- Border style: "none", "single", "double", "rounded", "solid", "shadow"
+    },
+  },
+  -- File refresh settings
+  refresh = {
+    enable = true,           -- Enable file change detection
+    updatetime = 100,        -- updatetime when Claude Code is active (milliseconds)
+    timer_interval = 1000,   -- How often to check for file changes (milliseconds)
+    show_notifications = true, -- Show notification when files are reloaded
+  },
+  -- Git project settings
+  git = {
+    use_git_root = true,     -- Set CWD to git root when opening Claude Code (if in git project)
+  },
+  -- Shell-specific settings
+  shell = {
+    separator = '&&',        -- Command separator used in shell commands
+    pushd_cmd = 'pushd',     -- Command to push directory onto stack (e.g., 'pushd' for bash/zsh, 'enter' for nushell)
+    popd_cmd = 'popd',       -- Command to pop directory from stack (e.g., 'popd' for bash/zsh, 'exit' for nushell)
+  },
+  -- Command settings
+  command = "claude",        -- Command used to launch Claude Code
+  -- Command variants
+  command_variants = {
+    -- Conversation management
+    continue = "--continue", -- Resume the most recent conversation
+    resume = "--resume",     -- Display an interactive conversation picker
+
+    -- Output options
+    verbose = "--verbose",   -- Enable verbose logging with full turn-by-turn output
+  },
+  -- Keymaps
+  keymaps = {
+    toggle = {
+      normal = "<C-,>",       -- Normal mode keymap for toggling Claude Code, false to disable
+      terminal = "<C-,>",     -- Terminal mode keymap for toggling Claude Code, false to disable
+      variants = {
+        continue = "<leader>cC", -- Normal mode keymap for Claude Code with continue flag
+        verbose = "<leader>cV",  -- Normal mode keymap for Claude Code with verbose flag
+      },
+    },
+    window_navigation = true, -- Enable window navigation keymaps (<C-h/j/k/l>)
+    scrolling = true,         -- Enable scrolling keymaps (<C-f/b>) for page up/down
+  }
+})
