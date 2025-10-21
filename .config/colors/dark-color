@@ -21,3 +21,4 @@ export BG="$COLOR15"      # background (white)
 export FG="$COLOR0"       # foreground (black)
 export ACCENT="$COLOR4"   # primary accent (blue)
 export GTKTHEME="1"       # dark theme for gtk applications
+export BANDW="0"

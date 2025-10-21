@@ -1,5 +1,5 @@
 --[[
--- MIT License
+ MIT License
 
 Copyright (c) 2025 Ron Xavier
 
@@ -24,6 +24,7 @@ SOFTWARE.
 
 local M = {}
 local colors = require("curr.palette")
+local noColor = (colors.BANDW == 1)
 
 M.setup = function()
   return {
@@ -31,36 +32,36 @@ M.setup = function()
     Normal = { fg = colors.fg, bg = colors.bg },
     NormalFloat = { fg = colors.fg, bg = colors.bg },
     Comment = { fg = colors.comment, italic = true },
-    Constant = { fg = colors.number, underline = true},
+    Constant = { fg = colors.number, underline = true, italic = true},
     String = { fg = colors.number, underline = true},
     Character = { fg = colors.number, underline = true },
-    Number = { fg = colors.number },
-    Boolean = { fg = colors.cyan },
-    Float = { fg = colors.number },
+    Number = { fg = colors.number, underline = true},
+    Boolean = { fg = colors.cyan, underline = true },
+    Float = { fg = colors.number, underline = true },
     FloatBorder = { fg = colors.white },
     Operator = { fg = colors.operator },
     Keyword = { fg = colors.cyan, bold = true }, --added bold. Testing
     Keywords = { fg = colors.cyan, bold = true }, --added bold 
     Identifier = { fg = colors.cyan },
-    Function = { fg = colors.yellow },
-    Statement = { fg = colors.keyword },
-    Conditional = { fg = colors.blue },
+    Function = { fg = colors.yellow, bold = true},
+    Statement = { fg = colors.keyword, bold = true },
+    Conditional = { fg = colors.blue, bold = true},
     Repeat = { fg = colors.blue },
     Label = { fg = colors.cyan },
     Exception = { fg = colors.magenta },
     PreProc = { fg = colors.yellow },
-    Include = { fg = colors.magenta },
-    Define = { fg = colors.magenta },
+    Include = { fg = colors.magenta, bold = true, italic = true },
+    Define = { fg = colors.magenta, bold = true, italic = true},
     Title = { fg = colors.cyan },
     Macro = { fg = colors.magenta },
     PreCondit = { fg = colors.cyan },
-    Type = { fg = colors.cyan },
-    StorageClass = { fg = colors.blue },
-    Structure = { fg = colors.yellow },
-    TypeDef = { fg = colors.yellow },
+    Type = { fg = colors.cyan, bold = true, underline = true},
+    StorageClass = { fg = colors.blue, bold = true, underline = true },
+    Structure = { fg = colors.yellow, bold = true, underline = true },
+    TypeDef = { fg = colors.yellow, bold = true, underline = true },
     Special = { fg = colors.number , italic = true },
     SpecialComment = { fg = colors.comment, italic = true },
-    Error = { fg = colors.bright_red },
+    Error = { fg = colors.bright_red, italic = true, bold = true, underline = true },
     Todo = { fg = colors.magenta, bold = true, italic = true },
     Underlined = { fg = colors.cyan, underline = true },
 

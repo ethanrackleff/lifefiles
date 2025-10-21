@@ -84,6 +84,7 @@ return {
   diag_warn  = "#fab387",
   diag_info  = "#89dceb",
   diag_hint  = "#b4befe",
+  BANDW = $BANDW,
 }
 
 EOF
