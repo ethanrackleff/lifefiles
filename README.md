@@ -1,5 +1,7 @@
 # E-Ink Optimized Arch & Sway Configuration
 
+![Alt text](./Example.png)
+
 These dotfiles are designed for optimal readability on black-and-white **E-Ink** displays. Instead of relying on hue differences, it uses text styles (**bold**, *italics*, and *underlines*) to differentiate syntax elements in neovim. This approach ensures code is clear and structured even in monochrome, following best practices from minimal-color themes (using font styles rather than color alone). Animations are minimized to ensure minimal E-ink "ghosting"
 
 
