@@ -8,6 +8,7 @@ These dotfiles are designed for optimal readability on black-and-white **E-Ink**
 ### Monochrome Emphasis
 
 E-Ink screens don't show color. So, for each syntax group in neovim, we give a unique combination of styling. Elements that would normally be distinguished by color are instead indicated by font weight or underlining. (Colors are still defined in the theme for compatibility, but an external palette will map them appropriately for e-ink or color use.). A boolean (e.g. `useEInk`) controls this behavior. When e-ink mode is enabled, additional bold/italic/underline styles are applied to the highlight groups. This allows the scheme to be used on regular displays (with colors providing distinction) or on e-ink devices (with styles providing distinction) consistently.
+
 ---
 
 ## Neovim: Syntax Groups and Styles
