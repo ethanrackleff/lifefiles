@@ -4,6 +4,20 @@
 
 These dotfiles are designed for optimal readability on black-and-white **E-Ink** displays. Instead of relying on hue differences, it uses text styles (**bold**, *italics*, and *underlines*) to differentiate syntax elements in neovim. This approach ensures code is clear and structured even in monochrome, following best practices from minimal-color themes (using font styles rather than color alone). Animations are minimized to ensure minimal E-ink "ghosting"
 
+--
+
+## Summary
+
+By using a combination of *underline*, **bold**, and *italic* text styles for syntax groups, this colorscheme makes code structure readable on e-ink devices where color-based distinction is not available. This approach echoes how early monochrome editors and modern accessibility-minded themes handle syntax highlighting, relying on text decorations to convey meaning. With `useEInk` mode, you can switch this styling on or off depending on your display.
+
+When e-ink mode is active, you can expect:
+
+* **Bold** text to denote key language constructs (keywords, important identifiers).
+* *Underlines* to mark constants and standout elements (literals, function names, types).
+* *Italics* to mark secondary or contextual elements (comments, built-ins).
+* Combinations (like **bold+underline** or **bold+italic**) for elements that deserve extra emphasis (e.g., functions, macros, errors).
+
+This ensures that code remains **highly readable and well-organized in black-and-white**, without sacrificing the informational richness that syntax highlighting provides.
 
 ## Design Rationale
 
@@ -27,7 +41,7 @@ Function names and method names are styled in **bold** and *underlined* text. Th
 
 ### Types and Classes
 
-Type names, class names, structs, and user-defined types are also **bold** and *underlined*. They represent important constructs (like data types or classes) and are given the same high emphasis as functions. Using the same style for types and classes helps them stand out as key elements (nouns in the code) just as functions are the verbs. (Built-in or primitive types may be *italicized* as well to differentiate them slightly, reflecting their special status in the language.)
+Type names, class names, structs, and user-defined types are also **bold** and *underlined*. They represent important constructs (like data types or classes) and are given the same high emphasis as functions. Using the same style for types and classes helps them stand out as key elements (nouns in the code) just as functions are the verbs. 
 
 ### Constants and Literals
 
@@ -39,7 +53,7 @@ Comments are set in *italic* text. Italics visually deemphasize the comments, in
 
 ### Preprocessor Directives and Macros
 
-In languages that have preprocessor commands or macros (for example, `#include`, `#define` in C/C++), those are styled **bold** and *italic*. The bold draws attention (since these directives can significantly affect code), and italic indicates that they're a kind of “meta” code (handled before the main code logic). This combination differentiates them from normal language keywords — they appear important but also a bit *different* (thanks to the italic) from regular control-flow keywords.
+In languages that have preprocessor commands or macros (for example, `#include`, `#define` in C/C++), those are styled **bold** and *italic*. The bold draws attention (since these directives can significantly affect code), and italic indicates that they're a kind of “meta” code (handled before the main code logic). This combination differentiates them from normal language keywords. they appear important but also a bit *different* (thanks to the italic) from regular control-flow keywords.
 
 ### Operators and Punctuation
 
@@ -69,18 +83,3 @@ Most editor interface elements (line numbers, status lines, menus, etc.) remain 
 ---
 
 ##Sway
-
----
-
-## Conclusion
-
-By using a combination of *underline*, **bold**, and *italic* text styles for syntax groups, this colorscheme makes code structure readable on e-ink devices where color-based distinction is not available. This approach echoes how early monochrome editors and modern accessibility-minded themes handle syntax highlighting – relying on text decorations to convey meaning. With `useEInk` mode, you can switch this styling on or off depending on your display.
-
-In summary, when e-ink mode is active, you can expect:
-
-* **Bold** text to denote key language constructs (keywords, important identifiers).
-* *Underlines* to mark constants and standout elements (literals, function names, types).
-* *Italics* to mark secondary or contextual elements (comments, built-ins).
-* Combinations (like **bold+underline** or **bold+italic**) for elements that deserve extra emphasis or special treatment (e.g., functions, macros, errors).
-
-This ensures that code remains **highly readable and well-organized in black-and-white**, without sacrificing the informational richness that syntax highlighting provides.
